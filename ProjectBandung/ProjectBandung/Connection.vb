@@ -7,10 +7,7 @@ Module Connection
 
         Try
             If conn.State = ConnectionState.Closed Then
-                conn.ConnectionString = "DATABASE=" & My.Settings.myDB & amp;amp;amp; ";" _
-                  & "SERVER=" & My.Settings.myServer & ";user id=" & My.Settings.myUsername _
-                  & ";password=" & My.Settings.myPassword &amp;amp;amp;";port=" & _
-                  My.Settings.myPort &amp;amp;amp; ";charset=utf8"
+                conn.ConnectionString = "server=203.142.66.181;database=demo_web;username=demo_web;password=demoweb1"
                 conn.Open()
             End If
 
