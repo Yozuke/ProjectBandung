@@ -20,12 +20,15 @@ Public Class LoginScreen
 
             If count = 1 Then
                 Dim MM = New MainMenu()
+                MM.catchstid = dr.GetString(1)
+                DisconnectDatabase()
                 MM.Show()
                 Me.Close()
             Else
                 MsgBox("Data user & password tidak ditemukan")
                 user_box.Clear()
                 pass_box.Clear()
+                DisconnectDatabase()
             End If
         End If
 
